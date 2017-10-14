@@ -1,10 +1,10 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
 import { Button } from 'amazeui-react';
-export class myHome extends React.Component {
+export  default class myHome extends React.Component {
 	render() {
 		return(
-			<Button class='am-btn am-btn-primary'>home</Button>
+			<Button type='button' className="am-btn am-btn-primary">hello,home</Button>
 		);
 	}
 }
