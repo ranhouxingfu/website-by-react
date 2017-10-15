@@ -37,14 +37,14 @@ export default class myHome extends React.Component {
 			<div>
 			<Slider slideSpeed={2000} autoPlay>
     <Slider.Item>
-      <img  src='../images/banner1.jpg'/>
+      <img src='../images/banner1.jpg'/>
           <div className='banner-design'>
       <h2 className='banner-title'>享受美食，幸福来得太突然
 </h2>
       <p>店门口就能看见大厨烹饪的每一道佳肴</p> 
       </div>
     </Slider.Item>
-    <Slider.Item><img  src="../images/banner2.jpg"/>
+    <Slider.Item><img src="../images/banner2.jpg"/>
         <div className='banner-design'>
       <h2 className='banner-title'>装修简洁，暖色调，清新中带业暖意
 </h2>
@@ -60,7 +60,7 @@ export default class myHome extends React.Component {
       </Slider.Item>
   </Slider>
  <div>
- <div  className='first-box'>
+ <div className='first-box'>
  <h3>文艺范餐厅</h3>
 <p>由商业企业快速供应、即刻食用、价格合理以满足人们日常生活需要的大众化餐饮。</p>
 </div>
@@ -68,7 +68,7 @@ export default class myHome extends React.Component {
  <Col sm={12} md={2} lg={2} lgOffset={2} mdOffset={1} className='boss-img'>
  <img src='../images/boss.png' />
 </Col>
-<Col  sm={12} md={8} lg={6}>
+<Col sm={12} md={8} lg={6}>
 <div className='welcome-box'>
 <h3>欢迎光临</h3>
 <p>餐厅的色彩因个人爱好和性格不同而有较大差异。但总的说来，餐厅色彩宜以明朗轻快的色调为主，最适合用的是橙色以及相同色相的姐妹色。</p>
