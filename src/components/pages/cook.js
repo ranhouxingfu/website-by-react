@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Col, Image, Icon} from 'amazeui-react'
-export default class aboutUs extends React.Component {
+export default class cook extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {}

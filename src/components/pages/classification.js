@@ -1,12 +1,12 @@
 import React from 'react'
-import {Grid, Col,Icon } from 'amazeui-react'
+import { Grid, Col, Icon } from 'amazeui-react'
 export default class classification extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 	render() {
 		return(
-			<div className='content-box'>
+			<div>
 			<div className='special-title'>
  	<h3 className='special-p'><Icon icon='cutlery'></Icon></h3>
  	<h3 className='special-p'>主食</h3>
@@ -91,6 +91,99 @@ export default class classification extends React.Component {
  	<h3 className='special-p'>甜品</h3>
  	<p>主料突出，形色美观，口味鲜美，营养丰富，供应方便</p>
  	</div>
+ 	 	<Grid className="doc-g food-list">
+ <Col sm={6} md={3} lg={2}>
+ <div className='img-contain'>
+ <img src='../images/sweet1.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+  <Col sm={6} md={3} lg={2}>
+  <div className='img-contain'>
+ <img src='../images/sweet2.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+  <Col sm={6} md={3} lg={2}>
+  <div className='img-contain'>
+ <img src='../images/sweet3.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+ <Col sm={6} md={3} lg={2}>
+  <div className='img-contain'>
+ <img src='../images/sweet4.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+  <Col sm={6} md={3} lg={2}>
+  <div className='img-contain'>
+ <img src='../images/sweet5.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+ <Col sm={6} md={3} lg={2}>
+  <div className='img-contain'>
+ <img src='../images/sweet6.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+   <Col sm={6} md={3} lg={2}>
+  <div className='img-contain'>
+ <img src='../images/sweet8.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+    <Col sm={6} md={3} lg={2}>
+  <div className='img-contain'>
+ <img src='../images/sweet10.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+   <Col sm={6} md={3} lg={2}>
+  <div className='img-contain'>
+ <img src='../images/sweet9.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+
+   <Col sm={6} md={3} lg={2}>
+  <div className='img-contain'>
+ <img src='../images/sweet7.jpg'/>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>甜品</p>
+  <p className='food-price'>￥99</p>
+ </div>
+ </Col>
+ </Grid>
  	<div className='special-title'>
  	<h3 className='special-p'><Icon icon='glass'></Icon></h3>
  	<h3 className='special-p'>酒水</h3>

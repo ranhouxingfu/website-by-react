@@ -4,80 +4,64 @@ require('styles/App.css')
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { HashRouter, Route } from 'react-router-dom'
-import { Header, Navbar } from 'amazeui-react'
+import { Header, Menu ,Footer} from 'amazeui-react'
 import myHome from './pages/home'
-import myTest from './pages/test'
-import myPage from './pages/page'
+import cook from './pages/cook'
 import aboutUs from './pages/about'
 import classification from './pages/classification'
 export default class AppComponent extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			topProps: {
-				title: 'Amaze UI',
-				link: '#title-link',
-				data: {
-					left: [{
-						link: '#/',
-						icon: 'home'
-					}],
-					right: [{
-						link: '#/aboutUs',
-						title: '关于我们'
-					}]
-				}
-			},
-			bottomData: [{
-					title: '首页',
-					link: '/',
-					icon: 'home'
-				},
-				{
-					title: '分类',
-					link: '/classification',
-					icon: 'github'
-				},
-				{
-					title: '购物车',
-					link: '/page',
-					icon: 'shopping-cart'
-				},
-				{
-					title: '我的',
-					link: '/page',
-					icon: 'user'
-				}
-			]
+			menuData: [{
+				link: '#/',
+				title: '首页'
+			}, {
+				link: '#/classification',
+				title: '菜单食谱'
+			}, {
+				link: '#/cook',
+				title: '金牌厨师'
+			}, {
+				link: '#/aboutUs',
+				title: '关于我们'
+			}],
+			footerData: [
+  'CopyRight©2014 AllMobilize Inc.',
+  '京ICP备13033158'
+]
 		}
-		this.onSelect = this.onSelect.bind(this);
-		this.handleSelect = this.handleSelect.bind(this);
+//		this.handleClick = this.handleClick.bind(this);
 	}
-	onSelect(nav, e) {
-		e.preventDefault();
-	}
-	/*======底部导航=========*/
-	handleSelect(link, e) {
-		e.preventDefault();
-		location.hash = link;
-	}
+//	handleClick(nav, index, e) {
+//		if(nav && nav.subMenu) {
+//			// 有二级菜单的链接点击了
+//		} else {
+//			e.preventDefault();
+//			console.log('点击的链接为：', nav);
+//			// do something
+//			// this.handleToggle(); // 关闭整个下拉菜单
+//		}
+//	};
 	render() {
 		/*=====================顶部内容===================*/
 		return(
 			<HashRouter>
    			<div>
-   			
-   			<Header {...this.state.topProps}  className='page-title'/>
-   			<Navbar onSelect={this.handleSelect} data={this.state.bottomData} />
+   			 <Header title="Menu Demo" />
+    <Menu
+      toggleIcon="list"
+      data={this.state.menuData}
+      theme="dropdown1"
+       />
   			<div>{this.props.children}</div>
-  			
        		 <Route exact path='/' component={myHome} />
-       		 <Route path='/test' component={myTest} />
-        	<Route path='/page' component={myPage} />
-        	<Route path='/aboutUs' component={aboutUs} />
+        	<Route path='/cook' component={cook} />
+        	<Route path='/aboutUs' component={aboutUs}/>
         	<Route path='/classification' component={classification} />
-        
+        	  			<Footer data={this.state.footerData} mobileTitle="手机版" className='footer-box' />
         </div>
+
   </HashRouter>
 		)
 	}
