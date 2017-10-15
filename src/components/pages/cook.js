@@ -23,43 +23,45 @@ export default class cook extends React.Component {
  	<h3 className='special-p'>金牌厨师</h3>
  	</div>
  <Grid className="doc-g img-list">
- <Col sm={12} md={4} lg={4}>
-    <Col sm={2} md={5} lg={3}>
+ <Col sm={12} md={5} lg={5} lgOffset={1} mdOffset={1}>
+    <Col sm={2} md={3} lg={3}>
       <Image
       src="../images/cook1.jpg"
       width="70"
       height="70"
       circle />
       </Col>
-    <Col sm={9} md={7} lg={9}><p>餐的主要特业是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。</p></Col>
+    <Col sm={9} md={9} lg={9}><p>餐的主要特业是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。</p></Col>
     </Col>
-    <Col  sm={12} md={4} lg={4}>
-     <Col sm={2} md={5} lg={3}>
+    <Col  sm={12} md={5} lg={5}>
+     <Col sm={2} md={3} lg={3}>
       <Image
       src="../images/cook2.jpg"
       width="70"
       height="70"
       circle />
       </Col>
-    <Col sm={9} md={7} lg={9}><p>餐的主要特业是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。</p></Col></Col>
-    <Col  sm={12} md={4} lg={4}>
-     <Col sm={2} md={5} lg={3}>
+    <Col sm={9} md={9} lg={9}><p>餐的主要特业是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。</p></Col></Col>
+    <Col lg={1} md={1}></Col>
+    <Col  sm={12} md={5} lg={5} lgOffset={1} mdOffset={1}>
+     <Col sm={2} md={3} lg={3}>
       <Image
       src="../images/cook3.jpg"
       width="70"
       height="70"
       circle />
       </Col>
-    <Col sm={9} md={7} lg={9}><p>餐的主要特业是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。</p></Col></Col>
-        <Col  sm={12} md={4} lg={4}>
-     <Col sm={2} md={5} lg={3}>
+    <Col sm={9} md={9} lg={9}><p>餐的主要特业是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。</p></Col></Col>
+        <Col  sm={12} md={5} lg={5}>
+     <Col sm={2} md={3} lg={3}>
       <Image
       src="../images/cook4.jpg"
       width="70"
       height="70"
       circle />
       </Col>
-    <Col sm={9} md={7} lg={9}><p>餐的主要特业是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。</p></Col></Col>
+    <Col sm={9} md={9} lg={9}><p>餐的主要特业是主料突出，形色美观，口味鲜美，营养丰富，供应方便等。</p></Col></Col>
+     <Col md={1} lg={1}></Col>
   </Grid>
 		</div>
 		)

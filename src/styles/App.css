@@ -6,6 +6,7 @@ ul {
 	/*background: #222;*/
 	margin: 0;
 	padding: 0;
+	font-family: "微软雅黑";
 }
 
 .index img {
@@ -74,7 +75,9 @@ ul {
 .aboutus-design {
 	text-indent: 2em;
 }
-
+.aboutus-describe{
+	padding: 0 15px;
+}
 .aboutus-img {
 	width: 100%;
 }
@@ -176,8 +179,31 @@ ul {
 .food-list>div:last-child {
 	float: left !important;
 }
-
-@media screen and (max-width:768px) {
+.about-designP{
+	position: absolute;
+	z-index: 5;
+	top:30%;
+		width: 100%;
+	text-align: center;
+}
+.about-rigth-imgbox{
+	height: 330px;
+	overflow: hidden;
+}
+.about-last-box{
+	margin-bottom: 15px;
+}
+.work-content-box{
+	position: absolute;
+	z-index: 2;
+	left: 25%;
+	top:15%;
+	width: 25%;
+	padding: 50px 20px;
+	background: rgba(225,225,225,.3);
+	color: white;
+}
+@media screen and (max-width:767px) {
 	.welcom-ul {
 		display: none;
 	}
@@ -188,7 +214,73 @@ ul {
 		margin-top: 0;
 		text-align: center;
 	}
+	.about-design{
+	text-align: center;
+}
+.about-rigth-imgbox{
+	display: none;
+}
+.about-designP{
+	position: absolute;
+	z-index: 5;
+	top:10%;
+}
+.work-content-box{
+	left: 15%;
+	width: 70%;
+	padding: 50px 20px;
+
+}
 }
 .footer-box{
 	background: #222222;
+}
+.about-box img{
+	display: block;
+	width: 100%;
+}
+
+h3.about-design,p.about-design{
+	margin-bottom: 0;
+}
+p.about-design{
+	margin-top: 0.6rem;
+}
+.about-rigth-imgbox img{
+	display: block;
+	width: 100%;
+}
+.about-left-box{
+	margin: 20px 0;
+}
+
+.about-designP .about-title{
+	text-align: center;
+	color: white;
+}
+.work-box{
+	width: 100%;
+	height: 450px;
+	position: relative;
+	background: url('../images/bg1.jpg') no-repeat center 100%;
+}
+/*.work-box img{
+	display: block;
+	width: 100%;
+}*/
+.work-content-box h3{
+	text-align: center;
+}
+.work-content-box p span{
+	color: #10a6ac;
+	margin-left: 0.5em;
+}
+.work-content-box p{
+	margin: 0;
+}
+.work-time{
+	text-indent: 3em;
+}
+.work-dinner{
+	margin-top: 20px !important;
 }
