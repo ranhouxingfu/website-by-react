@@ -3,8 +3,13 @@ require('amazeui/dist/css/amazeui.min.css')
 require('styles/App.css')
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Util from '../libs/util'
+
 import { HashRouter, Route } from 'react-router-dom'
-import { Header, Menu ,Footer} from 'amazeui-react'
+import { Header, Menu, Footer } from 'amazeui-react'
+
+const Axios = Util.ajax;
+
 import myHome from './pages/home'
 import cook from './pages/cook'
 import aboutUs from './pages/about'
@@ -23,10 +28,10 @@ export default class AppComponent extends React.Component {
 			}, {
 				link: '#/cook',
 				title: '金牌厨师'
-			},  {
+			}, {
 				link: '#',
 				title: '就餐环境'
-			},{
+			}, {
 				link: '#/aboutUs',
 				title: '关于我们'
 			}, {
@@ -34,22 +39,19 @@ export default class AppComponent extends React.Component {
 				title: '预约服务'
 			}],
 			footerData: [
-  'CopyRight©2014 AllMobilize Inc.',
-  '京ICP备13033158'
-]
+				'CopyRight©2014 AllMobilize Inc.',
+				'京ICP备13033158'
+			],
+			className: ''
 		}
-//		this.handleClick = this.handleClick.bind(this);
+		this.handleClick = this.handleClick.bind(this);
 	}
-//	handleClick(nav, index, e) {
-//		if(nav && nav.subMenu) {
-//			// 有二级菜单的链接点击了
-//		} else {
-//			e.preventDefault();
-//			console.log('点击的链接为：', nav);
-//			// do something
-//			// this.handleToggle(); // 关闭整个下拉菜单
-//		}
-//	};
+	handleClick() {
+		this.refs.menu.handleToggle();
+	};
+	componentWillMount() {
+		window.$axios = Axios;
+	}
 	render() {
 		/*=====================顶部内容===================*/
 		return(
@@ -60,6 +62,8 @@ export default class AppComponent extends React.Component {
       toggleIcon="list"
       data={this.state.menuData}
       theme="dropdown1"
+      ref='menu'
+      onSelect={this.handleClick} 
        />
   			<div>{this.props.children}</div>
        		 <Route exact path='/' component={myHome} />
@@ -74,6 +78,50 @@ export default class AppComponent extends React.Component {
 		)
 	}
 }
+//Axios.interceptors.request.use(
+//
+//	config => {
+//		//		if(store.state.token) { // 判断是否存在token，如果存在的话，则每个http header都加上token
+//		//			config.headers.Authorization = `token ${store.state.token}`;
+//		//		}
+//		help.$children[0].showLoading = true;
+//		return config;
+//	},
+//	err => {
+//		loadinginstace.close()
+//
+//		//help.$children[0].showLoading = false;
+//		iView.Message.error('网络不给力，请稍后再试');
+//		return Promise.reject(err);
+//	});
+
+// http response 拦截器
+//Axios.interceptors.response.use(
+//	response => {
+//		setTimeout(function() {
+//			help.$children[0].showLoading = false;
+//		}, 800)
+//		return response;
+//	},
+//	error => {
+//		if(error.response) {
+//			switch(error.response.status) {
+//				case 401:
+//					// 返回 401 清除token信息并跳转到登录页面
+//					//store.commit(types.LOGOUT);
+//					router.replace({
+//						path: 'login',
+//						query: {
+//							redirect: router.currentRoute.fullPath
+//						}
+//					})
+//			}
+//			help.$children[0].showLoading = false;
+//			iView.Message.error('加载失败');
+//		}
+//		return Promise.reject(error) // 返回接口返回的错误信息
+//	});
+
 ReactDOM.render((
 	<AppComponent/>
 ), document.getElementById('app'));

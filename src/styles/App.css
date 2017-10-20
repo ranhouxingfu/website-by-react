@@ -9,13 +9,14 @@ ul {
 	font-family: "微软雅黑";
 }
 .header-box{
-	background: white;
+	/*background: white;*/
+	background: #f8f8f8;
 }
 .header-box h1{
 	color: black !important;
 }
 .header-contain .am-menu-dropdown1 .am-menu-toggle{
-	color:#1abc9c !important;
+	color:#ffcc3b !important;
 }
 .header-contain .am-menu-dropdown1 .am-menu-nav>li>a {
     border-bottom: 1px solid #f2f2f2;
@@ -23,7 +24,7 @@ ul {
     color: black !important;
 }
 .header-contain .am-menu-dropdown1 .am-menu-nav>li>a:hover{
-	background: #1abc9c !important;
+	background: #ffcc3b !important;
 	color: white !important;
 }
 .header-box .am-menu-nav>li>a{
@@ -82,7 +83,10 @@ ul {
 	margin: 0;
 	text-align: center;
 }
-
+.special-content{
+	width: 80%;
+	margin: 0 auto;
+}
 .special-content>.am-gallery-title {
 	float: left;
 	margin-top: 5px;
@@ -171,7 +175,7 @@ ul {
 .img-contain {
 	width: 100%;
 	padding: 10px;
-	height: 145px;
+	/*height: 145px;*/
 	overflow: hidden;
 }
 
@@ -196,7 +200,9 @@ ul {
 	margin: 0;
 	font-size: 16px;
 }
-
+.food-list{
+	width: 80%;
+}
 .food-list>div:last-child {
 	float: left !important;
 }
@@ -351,5 +357,23 @@ p.about-design{
 	width: 70%;
 	padding: 50px 20px;
 
+}
+.img-contain {
+	height:103px;
+}
+}
+@media (min-width:768px) and (max-width:1024px){
+	.img-contain {
+	height: 90px;
+}
+}
+@media (min-width:1024px) and (max-width:1349px){
+	.img-contain {
+	height: 140px;
+}
+}
+@media (min-width:1349px){
+	.img-contain {
+	height: 180px;
 }
 }

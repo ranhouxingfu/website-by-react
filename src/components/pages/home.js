@@ -1,63 +1,40 @@
 import React from 'react'
-import { Slider,Icon,Gallery,Grid,Col,Button } from 'amazeui-react'
+import { Slider, Icon, Gallery, Grid, Col, Button } from 'amazeui-react'
+//import axios from 'axios'
 export default class myHome extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state={
-			specialfood:[{
-    'img': '../images/noodle.jpg',
-    'title': '意面',
-    'desc': '￥79'
-  },{
-    'img': '../images/mainfood.jpg',
-    'title': '牛排',
-    'desc': '￥88'
-  },{
-    'img': '../images/salad1.jpg',
-    'title': '沙拉',
-    'desc': '￥39'
-  },{
-    'img': '../images/sweet10.jpg',
-    'title': '甜品',
-    'desc': '￥29'
-  },{
-    'img': '../images/mainfood1.jpeg',
-    'title': '牛排',
-    'desc': '￥99'
-  },{
-    'img': '../images/mainfood3.jpg',
-    'title': '下午茶',
-    'desc': '￥199'
-  }
-]
+		this.state = {
+			specialfood: [],
+			bannerData: []
 		}
 	}
+	componentWillMount() {
+		let that = this;
+		window.$axios({
+				url: 'banner.json',
+				method: 'get',
+			})
+			.then(function(res) {
+				that.setState({
+					bannerData: res.data.bannerData,
+					specialfood:res.data.specialfood
+				})
+			})
+
+	}
 	render() {
+		var item = this.state.bannerData.map(function(item, index) {
+			return(<Slider.Item key={index}>
+   						 	 <img src={item.url}/>
+         				 	<div className='banner-design'>
+     				 		<h2 className='banner-title'>{item.title}</h2>
+     					 	<p>{item.desc}</p></div></Slider.Item>)
+		})
 		return(
 			<div>
 			<Slider slideSpeed={2000} autoPlay>
-    <Slider.Item>
-      <img src='../images/banner1.jpg'/>
-          <div className='banner-design'>
-      <h2 className='banner-title'>享受美食，幸福来得太突然
-</h2>
-      <p>店门口就能看见大厨烹饪的每一道佳肴</p> 
-      </div>
-    </Slider.Item>
-    <Slider.Item><img src="../images/banner2.jpg"/>
-        <div className='banner-design'>
-      <h2 className='banner-title'>装修简洁，暖色调，清新中带业暖意
-</h2>
-      <p>吃货们，你们不要跟我抢位子~~</p> 
-      </div>
-    </Slider.Item>
-    <Slider.Item>
-      <img src='../images/banner3.jpg'/>
-      <div className='banner-design'>
-      <h2 className='banner-title'>别样的英式下午茶</h2>
-      <p>想和你一起虚度光阴，来场英式浪漫，还能去哪！</p> 
-      </div>
-      </Slider.Item>
+			{item}
   </Slider>
  <div>
  <div className='first-box'>
