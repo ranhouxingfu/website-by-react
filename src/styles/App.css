@@ -90,7 +90,7 @@ ul {
 }
 .marginTop{
 	margin-top: 0;
-	transition: all linear 0.5s;
+	transition: all linear 0.8s;
 }
 .special-content>.am-gallery-title {
 	float: left;
