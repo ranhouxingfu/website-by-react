@@ -32,7 +32,8 @@ export default class myHome extends React.Component {
  	 if(this.state.ticking){return }
  	 	this.setState({ticking:true})
  	 	window.requestAnimationFrame(()=>{
-   	 		    if(scrollTop>500){
+      console.log(scrollTop)
+   	 		    if(scrollTop>800){
    	 		    	this.setState({
    	 		    		classname:'marginTop'
    	 		    	})
