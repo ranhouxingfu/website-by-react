@@ -8,6 +8,7 @@ export default class myHome extends React.Component {
 			specialfood: [],
 			bannerData: []
 		}
+    this.scrollHandler=this.scrollHandler.bind(this)
 	}
 	componentWillMount() {
 		let that = this;
@@ -21,8 +22,24 @@ export default class myHome extends React.Component {
 					specialfood:res.data.specialfood
 				})
 			})
-
+    window.addEventListener('scroll', this.scrollHandler,false);
 	}
+  	componentDidMount() {
+      	window.addEventListener('scroll', this.scrollHandler,false);
+   }
+ 	handleScroll (e) {
+ 	 let scrollTop = event.srcElement.body.scrollTop;
+ 	 if(this.state.ticking){return }
+ 	 	this.setState({ticking:true})
+ 	 	window.requestAnimationFrame(()=>{
+   	 		    if(scrollTop>500){
+   	 		    	this.setState({
+   	 		    		classname:'marginTop'
+   	 		    	})
+   	 		    }
+ 	 		this.setState({ticking:false})
+ 	 	})
+  }
 	render() {
 		var item = this.state.bannerData.map(function(item, index) {
 			return(<Slider.Item key={index}>
@@ -64,7 +81,7 @@ export default class myHome extends React.Component {
  	<h3 className='special-p'>特别推荐</h3>
  	<p>主料突出，形色美观，口味鲜美，营养丰富，供应方便</p>
  	</div>
- 	<Gallery data={this.state.specialfood} className='special-content'/>
+ 	<Gallery data={this.state.specialfood} className={'special-content'+' '+this.state.classname}/>
  	</div>
   </div>
 		)
