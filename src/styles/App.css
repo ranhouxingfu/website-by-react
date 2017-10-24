@@ -101,7 +101,15 @@ ul {
 .special-content{
 	width: 80%;
 	margin: 0 auto;
+<<<<<<< HEAD
 	margin-top: 30px;
+=======
+  margin-top: 30px;
+}
+.marginTop{
+	margin-top: 0;
+	transition: all linear 0.8s;
+>>>>>>> 6076a0794170c625f9dc197a3e55c14e2ea4355f
 }
 .special-content>.am-gallery-title {
 	float: left;
@@ -393,7 +401,10 @@ p.about-design{
 	height: 180px;
 }
 }
+<<<<<<< HEAD
 .marginTop{
 	margin-top: 0;
 	transition: all linear 1s;
 }
+=======
+>>>>>>> 6076a0794170c625f9dc197a3e55c14e2ea4355f
