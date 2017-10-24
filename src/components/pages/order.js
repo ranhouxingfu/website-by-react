@@ -19,7 +19,7 @@ export default class order extends React.Component {
 	}
 	render() {
 		return(
-			<div className='order-contain'>
+			<div className='order-contain  contain'>
 			<div className='order-box'>
 			<img src='../images/coffee.jpg'/>
 			</div>

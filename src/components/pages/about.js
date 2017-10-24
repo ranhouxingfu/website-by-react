@@ -7,7 +7,7 @@ export default class aboutUs extends React.Component {
 	}
 	render() {
 		return(
-			<div>
+			<div  className='contain'>
 			<div className='about-box'>
 			<img src='../images/aboutus-bg.jpg'/>
 			<div className='about-designP'>

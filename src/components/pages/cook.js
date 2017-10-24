@@ -7,7 +7,7 @@ export default class cook extends React.Component {
 	}
 	render() {
 		return(
-			<div>
+			<div  className='contain '>
 			<Grid className="doc-g">
     <Col sm={12} md={7} lg={7}>
 			<p className='aboutus-design'>在什么都讲究跨界、讲究混搭的时代，这些工业元素也跨界到美食领域。以粗犷线条勾勒出“钢筋铁骨”，红砖水泥填充出“好皮囊”，再以钢铁器械细心打磨，每一家工业风格餐厅都有自己的特色。习惯了去文艺精致的餐厅吃饭的你，偶尔也可以换个风格，换换口味。

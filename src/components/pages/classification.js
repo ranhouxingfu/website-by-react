@@ -53,7 +53,7 @@ export default class classification extends React.Component {
 			)
 		})
 		return(
-			<div>
+			<div  className='contain'>
 			<div className='special-title'>
  	<h3 className='special-p'><Icon icon='cutlery'></Icon></h3>
  	<h3 className='special-p'>主食</h3>

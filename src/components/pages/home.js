@@ -10,11 +10,7 @@ export default class myHome extends React.Component {
 			bannerData: [],
 			classname:''
 		}
-<<<<<<< HEAD
 		this.handleScroll=this.handleScroll.bind(this);
-=======
-    this.scrollHandler=this.scrollHandler.bind(this)
->>>>>>> 6076a0794170c625f9dc197a3e55c14e2ea4355f
 	}
 	componentWillMount() {
 		let that = this;
@@ -28,43 +24,23 @@ export default class myHome extends React.Component {
 					specialfood:res.data.specialfood
 				})
 			})
-<<<<<<< HEAD
 			window.addEventListener('scroll', this.handleScroll,false);
 	}
  	componentDidMount() {
 //    	window.addEventListener('scroll', this.scrollHandler,false);
-   }
+  }
  	handleScroll () {
  	 let scrollTop = event.srcElement.body.scrollTop;
  	 	window.requestAnimationFrame(()=>{
-   	 		    if(scrollTop>500){
-=======
-    window.addEventListener('scroll', this.scrollHandler,false);
-	}
-  	componentDidMount() {
-      	window.addEventListener('scroll', this.scrollHandler,false);
-   }
- 	handleScroll (e) {
- 	 let scrollTop = event.srcElement.body.scrollTop;
- 	 if(this.state.ticking){return }
- 	 	this.setState({ticking:true})
- 	 	window.requestAnimationFrame(()=>{
-      console.log(scrollTop)
    	 		    if(scrollTop>800){
->>>>>>> 6076a0794170c625f9dc197a3e55c14e2ea4355f
    	 		    	this.setState({
    	 		    		classname:'marginTop'
    	 		    	})
    	 		    }
-<<<<<<< HEAD
+
  	 	})
   }
 
-=======
- 	 		this.setState({ticking:false})
- 	 	})
-  }
->>>>>>> 6076a0794170c625f9dc197a3e55c14e2ea4355f
 	render() {
 		var item = this.state.bannerData.map(function(item, index) {
 			return(<Slider.Item key={index}>
@@ -91,7 +67,7 @@ export default class myHome extends React.Component {
 		
 		
 		return(
-			<div>
+			<div className='contain'>
 			<Slider slideSpeed={1500} autoPlay directionNav={false} controlNav={false}>
 			{item}
   </Slider>
@@ -123,13 +99,9 @@ export default class myHome extends React.Component {
  	<h3 className='special-p'>特别推荐</h3>
  	<p>主料突出，形色美观，口味鲜美，营养丰富，供应方便</p>
  	</div>
-<<<<<<< HEAD
  	 	<Grid className={'doc-g food-list special-content'+' '+this.state.classname}>
          {specialfoodList}
  </Grid>
-=======
- 	<Gallery data={this.state.specialfood} className={'special-content'+' '+this.state.classname}/>
->>>>>>> 6076a0794170c625f9dc197a3e55c14e2ea4355f
  	</div>
   </div>
 		)
