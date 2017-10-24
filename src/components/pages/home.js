@@ -1,13 +1,16 @@
 import React from 'react'
-import { Slider, Icon, Gallery, Grid, Col, Button } from 'amazeui-react'
+import { Slider, Icon, Grid, Col, Button } from 'amazeui-react'
 //import axios from 'axios'
+import LazyLoad from 'react-lazyload'
 export default class myHome extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			specialfood: [],
-			bannerData: []
+			bannerData: [],
+			classname:''
 		}
+		this.handleScroll=this.handleScroll.bind(this);
 	}
 	componentWillMount() {
 		let that = this;
@@ -21,8 +24,22 @@ export default class myHome extends React.Component {
 					specialfood:res.data.specialfood
 				})
 			})
-
+			window.addEventListener('scroll', this.handleScroll,false);
 	}
+ 	componentDidMount() {
+//    	window.addEventListener('scroll', this.scrollHandler,false);
+   }
+ 	handleScroll () {
+ 	 let scrollTop = event.srcElement.body.scrollTop;
+ 	 	window.requestAnimationFrame(()=>{
+   	 		    if(scrollTop>500){
+   	 		    	this.setState({
+   	 		    		classname:'marginTop'
+   	 		    	})
+   	 		    }
+ 	 	})
+  }
+
 	render() {
 		var item = this.state.bannerData.map(function(item, index) {
 			return(<Slider.Item key={index}>
@@ -31,9 +48,26 @@ export default class myHome extends React.Component {
      				 		<h2 className='banner-title'>{item.title}</h2>
      					 	<p>{item.desc}</p></div></Slider.Item>)
 		})
+		var specialfoodList=this.state.specialfood.map(function(specialItem,i){
+				return(
+				<Col sm={6} md={3} lg={3} key={'specialfood'+i}>
+ <div className='img-contain'>
+   <LazyLoad height={500} offsetTop={200}>
+  <img src={specialItem.img}/>
+    </LazyLoad>
+ </div>
+ <div className='food-price-box'>
+ <p className='food-name'>{specialItem.title}</p>
+  <p className='food-price'>{specialItem.desc}</p>
+ </div>
+ </Col>
+			)
+		})
+		
+		
 		return(
 			<div>
-			<Slider slideSpeed={2000} autoPlay>
+			<Slider slideSpeed={1500} autoPlay directionNav={false} controlNav={false}>
 			{item}
   </Slider>
  <div>
@@ -64,7 +98,9 @@ export default class myHome extends React.Component {
  	<h3 className='special-p'>特别推荐</h3>
  	<p>主料突出，形色美观，口味鲜美，营养丰富，供应方便</p>
  	</div>
- 	<Gallery data={this.state.specialfood} className='special-content'/>
+ 	 	<Grid className={'doc-g food-list special-content'+' '+this.state.classname}>
+         {specialfoodList}
+ </Grid>
  	</div>
   </div>
 		)

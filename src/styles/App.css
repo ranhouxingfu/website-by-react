@@ -11,6 +11,21 @@ ul {
 .header-box{
 	/*background: white;*/
 	background: #f8f8f8;
+	position: fixed;
+	top:0;
+	z-index: 99;
+}
+.am-menu{
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+}
+.am-menu>a{
+	margin-top: 50px;
+}
+.am-menu>ul{
+	top:44px;
+	width: 100%;
 }
 .header-box h1{
 	color: black !important;
@@ -86,6 +101,7 @@ ul {
 .special-content{
 	width: 80%;
 	margin: 0 auto;
+	margin-top: 30px;
 }
 .special-content>.am-gallery-title {
 	float: left;
@@ -376,4 +392,8 @@ p.about-design{
 	.img-contain {
 	height: 180px;
 }
+}
+.marginTop{
+	margin-top: 0;
+	transition: all linear 1s;
 }

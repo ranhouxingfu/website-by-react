@@ -1,114 +1,138 @@
 {
 	"bannerData":[{
-	"url":"../src/images/banner1.jpg",
+	"url":"../images/banner1.jpg",
 	"title":"享受美食，幸福来得太突然",
 	"desc":"店门口就能看见大厨烹饪的每一道佳肴"
 },{
-	"url":"../src/images/banner2.jpg",
+	"url":"../images/banner2.jpg",
 	"title":"装修简洁，暖色调，清新中带业暖意",
 	"desc":"吃货们，你们不要跟我抢位子~~"
 },{
-	"url":"../src/images/banner3.jpg",
+	"url":"../images/banner3.jpg",
 	"title":"别样的英式下午茶",
 	"desc":"想和你一起虚度光阴，来场英式浪漫，还能去哪！"
 }],
 "specialfood":[{
-	"img": "../src/images/noodle.jpg",
+	"img": "../images/noodle.jpg",
 	"title": "意面",
 	"desc": "￥79"
 }, {
-	"img": "../src/images/mainfood.jpg",
+	"img": "../images/mainfood.jpg",
 	"title": "牛排",
 	"desc": "￥88"
 }, {
-	"img": "../src/images/salad1.jpg",
+	"img": "../images/salad1.jpg",
 	"title": "沙拉",
 	"desc": "￥39"
 }, {
-	"img": "../src/images/sweet10.jpg",
+	"img": "../images/sweet10.jpg",
 	"title": "甜品",
 	"desc": "￥29"
 }, {
-	"img": "../src/images/mainfood1.jpeg",
+	"img": "../images/mainfood1.jpeg",
 	"title": "牛排",
 	"desc": "￥99"
 }, {
-	"img": "../src/images/mainfood3.jpg",
+	"img": "../images/mainfood3.jpg",
+	"title": "下午茶",
+	"desc": "￥199"
+},{
+	"img": "../images/sweet1.jpg",
+	"title": "意面",
+	"desc": "￥79"
+}, {
+	"img": "../images/sweet2.jpg",
+	"title": "牛排",
+	"desc": "￥88"
+}, {
+	"img": "../images/sweet3.jpg",
+	"title": "沙拉",
+	"desc": "￥39"
+}, {
+	"img": "../images/sweet4.jpg",
+	"title": "甜品",
+	"desc": "￥29"
+}, {
+	"img": "../images/sweet5.jpg",
+	"title": "牛排",
+	"desc": "￥99"
+}, {
+	"img": "../images/sweet6.jpg",
 	"title": "下午茶",
 	"desc": "￥199"
 }],	
 
 "mainfood":[{
-	"src":"../src/images/salad1.jpg",
+	"src":"../images/salad1.jpg",
 	"name":"牛排",
 	"price":"￥99"
 },{
-	"src":"../src/images/salad1.jpg",
+	"src":"../images/salad1.jpg",
 	"name":"牛排",
 	"price":"￥99"
 },{
-	"src":"../src/images/noodle.jpg",
+	"src":"../images/noodle.jpg",
 	"name":"牛排",
 	"price":"￥99"
 },{
-	"src":"../src/images/mainfood1.jpeg",
+	"src":"../images/mainfood1.jpeg",
 	"name":"牛排",
 	"price":"￥99"
 },{
-	"src":"../src/images/mainfood2.jpg",
+	"src":"../images/mainfood2.jpg",
 	"name":"牛排",
 	"price":"￥99"
 },{
-	"src":"../src/images/salad.jpg",
+	"src":"../images/salad.jpg",
 	"name":"牛排",
 	"price":"￥99"
 },{
-	"src":"../src/images/mainfood3.jpg",
+	"src":"../images/mainfood3.jpg",
 	"name":"牛排",
 	"price":"￥99"
 },{
-	"src":"../src/images/food-design1.jpg",
+	"src":"../images/food-design1.jpg",
 	"name":"牛排",
 	"price":"￥99"
 }],
 "sweet":[{
-            	"src":"../src/images/sweet1.jpg",
+            	"src":"../images/sweet1.jpg",
             	"name":"甜品",
             	"price":"￥99"
             },{
-            	"src":"../src/images/sweet2.jpg",
+            	"src":"../images/sweet2.jpg",
             	"name":"甜品",
             	"price":"￥99"
             },{
-            	"src":"../src/images/sweet3.jpg",
+            	"src":"../images/sweet3.jpg",
             	"name":"甜品",
             	"price":"￥99"
             },{
-            	"src":"../src/images/sweet4.jpg",
+            	"src":"../images/sweet4.jpg",
             	"name":"甜品",
             	"price":"￥99"
             },{
-            	"src":"../src/images/sweet5.jpg",
+            	"src":"../images/sweet5.jpg",
             	"name":"甜品",
             	"price":"￥99"
             },{
-            	"src":"../src/images/sweet6.jpg",
+            	"src":"../images/sweet6.jpg",
             	"name":"甜品",
             	"price":"￥99"
             },{
-            	"src":"../src/images/sweet8.jpg",
+            	"src":"../images/sweet8.jpg",
             	"name":"甜品",
             	"price":"￥99"
             },{
-            	"src":"../src/images/sweet10.jpg",
+            	"src":"../images/sweet10.jpg",
             	"name":"甜品",
             	"price":"￥99"
             },{
-            	"src":"../src/images/sweet9.jpg",
+            	"src":"../images/sweet9.jpg",
             	"name":"甜品",
             	"price":"￥99"
             },{
-            	"src":"../src/images/sweet7.jpg",
+            	"src":"../images/sweet7.jpg",
             	"name":"甜品",
             	"price":"￥99"
             }]

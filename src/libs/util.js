@@ -10,7 +10,7 @@ let util = {
 //};
 
 const ajaxUrl = env === 'development' ?
-	'../data' :
+	'data' :
 	env === 'production' ?
 	'../data' :
 	'../data';
